@@ -1,4 +1,4 @@
-Goal (set 2026-11-19): the site in as-site/ should look as close to as.ucsd.edu as possible. Where DESIGN.md or the rules below conflict with that look, match as.ucsd.edu.
+Goal (set 2026-11-19): the site should look as close to as.ucsd.edu as possible. Where DESIGN.md or the rules below conflict with that look, match as.ucsd.edu.
 
 ## Tech rules (keep it simple)
 - Plain HTML5 and one CSS file. One small JS file, used only for the mobile menu button (under 20 lines). Nothing else.
