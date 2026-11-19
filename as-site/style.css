@@ -1,0 +1,648 @@
+:root {
+  --navy: #182B49;
+  --blue: #00629B;
+  --dark-blue: #004268;
+  --yellow: #FFCD00;
+  --sand: #F5F0E6;
+  --sand-light: #FAF7F2;
+  --line: #D8D7D7;
+  --cool-gray: #747678;
+  --gray: #666666;
+  --text: #333333;
+  --white: #FFFFFF;
+  --black: #000000;
+
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 48px;
+  --space-8: 64px;
+
+  --font: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --font-display: "Teko", "Arial Narrow", sans-serif;
+  --content: 1140px;
+  --gutter: var(--space-4);
+  /* Side padding that lines content up in a centered 1140px column on any width */
+  --inline: max(var(--gutter), (100% - var(--content)) / 2);
+  /* Home page panels sit in a slightly wider 1200px column, like as.ucsd.edu */
+  --panel-inline: max(var(--gutter), (100% - 1200px) / 2);
+  --panel-padding: var(--space-5);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--white);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--blue);
+}
+
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
+}
+
+.site-nav :focus-visible,
+.hero :focus-visible,
+.panel-dark :focus-visible,
+footer :focus-visible {
+  outline-color: var(--white);
+}
+
+h1,
+h2 {
+  margin: 0 0 var(--space-4);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  line-height: 1.1;
+}
+
+h1 {
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: var(--blue);
+}
+
+h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+}
+
+h3 {
+  margin: 0 0 var(--space-2);
+  font-size: 1.375rem;
+  line-height: 1.2;
+  color: var(--navy);
+}
+
+p,
+ul,
+ol {
+  margin: 0 0 var(--space-4);
+}
+
+.skip-link {
+  position: absolute;
+  top: var(--space-2);
+  left: var(--space-2);
+  z-index: 2;
+  padding: var(--space-2) var(--space-4);
+  background: var(--white);
+}
+
+.skip-link:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  min-height: 92px;
+  padding: var(--space-4) var(--inline);
+  background: var(--white);
+}
+
+.site-name {
+  color: var(--black);
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.site-name:hover {
+  color: var(--gray);
+}
+
+.ucsd-logo {
+  display: none;
+}
+
+.ucsd-logo img {
+  width: 226px;
+}
+
+.site-nav {
+  padding-inline: var(--inline);
+  background: var(--blue);
+}
+
+.site-nav button {
+  margin-block: var(--space-2);
+  padding: var(--space-2) var(--space-4);
+  border: 2px solid var(--white);
+  border-radius: 4px;
+  background: none;
+  color: var(--white);
+  font: inherit;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+}
+
+.site-nav button[aria-expanded="false"] + ul {
+  display: none;
+}
+
+.site-nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-nav > ul {
+  margin-inline: -15px;
+  padding-bottom: var(--space-2);
+}
+
+.site-nav ul ul {
+  padding-left: var(--space-5);
+}
+
+.site-nav a {
+  display: block;
+  padding: 13px 15px;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.site-nav a:hover,
+.site-nav a[aria-current="page"] {
+  background: var(--dark-blue);
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 15px 0 0;
+  list-style: none;
+  color: var(--gray);
+  font-size: 0.8125rem;
+}
+
+.breadcrumbs li + li::before {
+  content: "/" / "";
+  padding: 0 5px;
+  color: var(--line);
+}
+
+.breadcrumbs a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button {
+  display: inline-block;
+  padding: var(--space-3) var(--space-6);
+  border: 0;
+  border-radius: 8px;
+  background: var(--navy);
+  color: var(--white);
+  font: inherit;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--blue);
+}
+
+.hero {
+  display: grid;
+  background: var(--navy);
+}
+
+.hero > * {
+  grid-area: 1 / 1;
+}
+
+.hero img {
+  width: 100%;
+  height: 100%;
+  min-height: 20rem;
+  object-fit: cover;
+}
+
+.hero header {
+  align-self: start;
+  margin: 8% var(--inline) var(--space-6);
+}
+
+.hero h1 {
+  margin-bottom: var(--space-6);
+  color: var(--white);
+  text-shadow: 0 0 50px rgb(0 0 0 / 0.75);
+}
+
+.hero .button {
+  padding: 14px 60px;
+  border: 2px solid var(--white);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+}
+
+.hero .button:hover {
+  background: var(--white);
+  color: var(--navy);
+}
+
+.panel {
+  padding: var(--panel-padding);
+  background: var(--sand);
+}
+
+main > .panel {
+  margin: var(--space-8) var(--panel-inline);
+}
+
+.panel h2 {
+  margin-bottom: var(--space-5);
+}
+
+.panel-dark {
+  background: var(--navy);
+  color: var(--white);
+}
+
+.panel-dark h2,
+.panel-dark h3,
+.panel-dark a {
+  color: var(--white);
+}
+
+.panel-split {
+  display: grid;
+  gap: var(--space-6);
+  align-items: center;
+}
+
+.panel-card {
+  padding: var(--space-5) var(--space-6) var(--space-6);
+  border-radius: 14px;
+  background: var(--white);
+}
+
+.panel-card > :last-child {
+  margin-bottom: 0;
+}
+
+.card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-list > li {
+  padding: var(--space-5) var(--space-6);
+  border-radius: 14px;
+  background: var(--white);
+  color: var(--navy);
+}
+
+.panel-dark .card-list > li {
+  background: var(--blue);
+  color: var(--white);
+}
+
+.card-list > li > :last-child {
+  margin-bottom: 0;
+}
+
+.card-list time {
+  display: block;
+  margin-bottom: var(--space-1);
+  font-size: 0.85em;
+  text-transform: uppercase;
+}
+
+iframe {
+  display: block;
+  width: 100%;
+  height: 600px;
+  margin-bottom: var(--space-4);
+  border: 0;
+  border-radius: 14px;
+  background: var(--white);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--space-2) var(--space-5);
+  margin: 0 0 var(--space-5);
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin: 0;
+}
+
+.page {
+  padding: 0 var(--inline) var(--space-8);
+}
+
+.page article {
+  padding-top: 40px;
+}
+
+.page section {
+  margin-top: var(--space-6);
+}
+
+.sidebar {
+  margin-top: var(--space-7);
+  padding: var(--space-4);
+  border: 1px solid var(--line);
+}
+
+.sidebar h2 {
+  margin: 0 0 0.4em;
+  font-family: var(--font);
+  font-size: 1.4rem;
+  font-weight: 700;
+  letter-spacing: normal;
+  color: var(--text);
+}
+
+.sidebar h2 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.sidebar ul {
+  margin: 0 calc(-1 * var(--space-4)) calc(-1 * var(--space-4));
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar li {
+  border-top: 1px solid var(--line);
+}
+
+.sidebar ul a {
+  display: block;
+  padding: var(--space-4);
+  color: var(--text);
+  text-decoration: none;
+}
+
+.sidebar ul a:hover {
+  background: var(--sand-light);
+}
+
+.sidebar li:has(> [aria-current="page"]) {
+  padding: var(--space-4);
+  background: var(--sand);
+  font-weight: 700;
+}
+
+.sidebar li:has(> [aria-current="page"]) a {
+  padding-inline: 0;
+  background: none;
+}
+
+.sidebar li:has(> [aria-current="page"]) > a {
+  padding-block: 0;
+}
+
+.sidebar li:has(> [aria-current="page"]) a:hover {
+  text-decoration: underline;
+}
+
+.sidebar ul ul {
+  margin: 0.4em 0 0;
+  padding: 0 10px;
+  font-size: 85%;
+  font-weight: 400;
+}
+
+table {
+  width: 100%;
+  margin-bottom: var(--space-4);
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+}
+
+th {
+  background: var(--sand);
+}
+
+form {
+  display: grid;
+  gap: var(--space-4);
+  max-width: 36rem;
+}
+
+form label {
+  display: grid;
+  gap: var(--space-1);
+  font-weight: 500;
+}
+
+input,
+select,
+textarea {
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--cool-gray);
+  border-radius: 4px;
+  background: var(--white);
+  color: inherit;
+  font: inherit;
+}
+
+form .button {
+  justify-self: start;
+}
+
+footer {
+  display: grid;
+  gap: var(--space-4);
+  padding: var(--space-5) var(--inline);
+  background: var(--blue);
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+footer p,
+footer ul {
+  margin: 0;
+}
+
+footer ul {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: var(--space-1);
+  padding: 0;
+  list-style: none;
+}
+
+footer li {
+  margin-right: 0.5em;
+  padding-right: 0.75em;
+  border-right: 1px solid var(--white);
+}
+
+footer li:last-child {
+  border-right: 0;
+}
+
+footer a {
+  color: var(--white);
+}
+
+footer img {
+  width: 158px;
+}
+
+@media (min-width: 768px) {
+  :root {
+    --gutter: var(--space-5);
+    --panel-padding: var(--space-7);
+  }
+
+  .ucsd-logo {
+    display: block;
+  }
+
+  .site-nav button {
+    display: none;
+  }
+
+  /* Repeats the mobile "closed" selector so the menu always shows on wider screens */
+  .site-nav > ul,
+  .site-nav button[aria-expanded="false"] + ul {
+    display: flex;
+    padding: 0;
+  }
+
+  .site-nav > ul > li {
+    position: relative;
+  }
+
+  .site-nav li:hover > a {
+    background: var(--dark-blue);
+  }
+
+  .site-nav li:has(ul) > a::after {
+    content: "";
+    display: inline-block;
+    margin-left: var(--space-2);
+    border: var(--space-1) solid transparent;
+    border-top-color: currentColor;
+    border-bottom: 0;
+    vertical-align: middle;
+  }
+
+  .site-nav ul ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1;
+    min-width: 160px;
+    width: max-content;
+    padding: 0;
+    border: 1px solid rgb(0 0 0 / 0.15);
+    background: var(--white);
+    box-shadow: 0 6px 12px rgb(0 0 0 / 0.175);
+  }
+
+  .site-nav li:hover > ul,
+  .site-nav li:focus-within > ul {
+    display: block;
+  }
+
+  .site-nav ul ul a,
+  .site-nav ul ul a:hover {
+    padding: 6px 20px;
+    background: var(--white);
+    color: var(--blue);
+  }
+
+  .site-nav ul ul a:hover {
+    text-decoration: underline;
+  }
+
+  .site-nav ul ul :focus-visible {
+    outline-color: var(--blue);
+  }
+
+  .panel-split {
+    grid-template-columns: 7fr 5fr;
+  }
+
+  footer {
+    grid-template-columns: 1fr auto;
+    column-gap: var(--space-6);
+  }
+
+  footer > a {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --gutter: var(--space-6);
+  }
+
+  .page {
+    display: grid;
+    grid-template-columns: 229px 1fr;
+    column-gap: var(--space-8);
+  }
+
+  .breadcrumbs {
+    grid-column: 1 / -1;
+  }
+
+  .page article {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .sidebar {
+    grid-column: 1;
+    grid-row: 2;
+    align-self: start;
+    margin-top: 40px;
+  }
+}

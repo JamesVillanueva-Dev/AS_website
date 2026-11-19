@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AS Student Life | UC San Diego</title>
+  <meta name="description" content="Events, resources and support from the AS Office of Student Life at UC San Diego.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Teko:wght@600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Associated Students</a>
+    <a class="ucsd-logo" href="https://ucsd.edu"><img src="images/ucsd-logo.png" alt="UC San Diego" width="451" height="85"></a>
+  </header>
+
+  <nav class="site-nav" aria-label="Main">
+    <button type="button" aria-controls="nav-list" hidden>MENU</button>
+    <ul id="nav-list">
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li>
+        <a href="sand.html">SAND</a>
+        <ul>
+          <li><a href="sand.html#open-programs">Open Programs</a></li>
+          <li><a href="sand.html#how-to-apply">How to Apply</a></li>
+          <li><a href="sand.html#tabling-events">Tabling Events</a></li>
+          <li><a href="sand.html#for-companies">For Companies</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="resources.html">Resources</a>
+        <ul>
+          <li><a href="resources.html#fun-facts">Fun Facts</a></li>
+          <li><a href="resources.html#campus-resources">Campus Resources</a></li>
+          <li><a href="resources.html#request-form">Request Form</a></li>
+        </ul>
+      </li>
+      <li><a href="sfl.html">SFL</a></li>
+      <li><a href="student-orgs.html">Student Orgs</a></li>
+      <li><a href="staff.html">Staff</a></li>
+    </ul>
+  </nav>
+
+  <main id="main">
+    <section class="hero">
+      <img src="images/hero.svg" alt="" width="2000" height="736">
+      <header>
+        <h1>AS Student Life</h1>
+        <a class="button" href="#about-our-office">Learn More</a>
+      </header>
+    </section>
+
+    <section class="panel panel-dark" id="upcoming-events">
+      <h2>Upcoming Events</h2>
+      <ul class="card-list">
+        <li>
+          <time datetime="2026-11-20">Fri, Nov 20</time>
+          <h3>Friendsgiving Potluck</h3>
+          <p>5:00–8:00 p.m. · Student Center Patio</p>
+        </li>
+        <li>
+          <time datetime="2026-12-02">Wed, Dec 2</time>
+          <h3>Sunset Yoga on Library Walk</h3>
+          <p>4:30–5:30 p.m. · Library Walk</p>
+        </li>
+        <li>
+          <time datetime="2026-12-09">Wed, Dec 9</time>
+          <h3>Finals Week Study Snacks</h3>
+          <p>2:00–4:00 p.m. · Geisel Library, 1st Floor</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel" id="calendar">
+      <h2>Events Calendar</h2>
+      <p>Everything happening on campus, kept up to date.</p>
+      <!-- To show your calendar: Google Calendar > Settings > your calendar > Integrate calendar, then paste its embed link into both src and href below. -->
+      <iframe src="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&amp;ctz=America%2FLos_Angeles" title="Campus events calendar" loading="lazy"></iframe>
+      <p><a href="https://calendar.google.com/calendar/embed?src=en.usa%23holiday%40group.v.calendar.google.com&amp;ctz=America%2FLos_Angeles">Open the calendar in Google Calendar</a></p>
+    </section>
+
+    <section class="panel" id="past-events">
+      <h2>Past Events</h2>
+      <ul class="card-list">
+        <li>
+          <time datetime="2026-11-18">Wed, Nov 18</time>
+          <h3>Fall Career Fair</h3>
+          <p>Students met recruiters and practiced their pitches on Price Center Plaza.</p>
+        </li>
+        <li>
+          <time datetime="2026-11-05">Thu, Nov 5</time>
+          <h3>SAND Info Night</h3>
+          <p>An intro to the SAND program and this year’s open ambassador roles.</p>
+        </li>
+        <li>
+          <time datetime="2026-10-29">Thu, Oct 29</time>
+          <h3>Spooky Study Jam</h3>
+          <p>A Halloween study night with snacks and costume prizes.</p>
+        </li>
+      </ul>
+    </section>
+
+    <section class="panel panel-split" id="about-our-office">
+      <div class="panel-card">
+        <h2>About Our Office</h2>
+        <p>The AS Office of Student Life plans campus events, connects students with resources, supports student organizations and Sorority &amp; Fraternity Life, and runs the SAND ambassador program.</p>
+        <dl>
+          <dt>Location</dt>
+          <dd>Price Center East, 4th Floor</dd>
+          <dt>Hours</dt>
+          <dd>Monday–Friday, 9 a.m.–5 p.m.</dd>
+          <dt>Email</dt>
+          <dd><a href="mailto:studentlife@example.edu">studentlife@example.edu</a></dd>
+        </dl>
+        <a class="button" href="staff.html">Meet the Staff</a>
+      </div>
+      <img src="images/mascot-cat-surfing.png" alt="The AS Student Life cat mascot surfing a wave" width="720" height="540">
+    </section>
+  </main>
+
+  <footer>
+    <p>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230<br>Copyright © 2026 Regents of the University of California. All rights reserved.</p>
+    <ul>
+      <li><a href="https://accessibility.ucsd.edu/">Accessibility</a></li>
+      <li><a href="https://ucsd.edu/about/privacy.html">Privacy</a></li>
+      <li><a href="https://ucsd.edu/about/terms-of-use.html">Terms of Use</a></li>
+      <li><a href="mailto:studentlife@example.edu">Feedback</a></li>
+    </ul>
+    <a href="https://ucsd.edu/"><img src="images/ucsd-logo-white.png" alt="UC San Diego" width="315" height="60"></a>
+  </footer>
+</body>
+</html>

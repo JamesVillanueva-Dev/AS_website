@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources | AS Student Life | UC San Diego</title>
+  <meta name="description" content="Free printing, study spots, campus resource hubs, and event and resource requests.">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&amp;family=Teko:wght@600&amp;display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="menu.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <a class="site-name" href="index.html">Associated Students</a>
+    <a class="ucsd-logo" href="https://ucsd.edu"><img src="images/ucsd-logo.png" alt="UC San Diego" width="451" height="85"></a>
+  </header>
+
+  <nav class="site-nav" aria-label="Main">
+    <button type="button" aria-controls="nav-list" hidden>MENU</button>
+    <ul id="nav-list">
+      <li><a href="index.html">Home</a></li>
+      <li>
+        <a href="sand.html">SAND</a>
+        <ul>
+          <li><a href="sand.html#open-programs">Open Programs</a></li>
+          <li><a href="sand.html#how-to-apply">How to Apply</a></li>
+          <li><a href="sand.html#tabling-events">Tabling Events</a></li>
+          <li><a href="sand.html#for-companies">For Companies</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="resources.html" aria-current="page">Resources</a>
+        <ul>
+          <li><a href="resources.html#fun-facts">Fun Facts</a></li>
+          <li><a href="resources.html#campus-resources">Campus Resources</a></li>
+          <li><a href="resources.html#request-form">Request Form</a></li>
+        </ul>
+      </li>
+      <li><a href="sfl.html">SFL</a></li>
+      <li><a href="student-orgs.html">Student Orgs</a></li>
+      <li><a href="staff.html">Staff</a></li>
+    </ul>
+  </nav>
+
+  <main id="main" class="page">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Resources</li>
+      </ol>
+    </nav>
+    <article>
+      <h1>Resources</h1>
+      <p>Tips, campus links, and a way to ask us for what you need.</p>
+
+      <section class="panel panel-dark" id="fun-facts">
+        <h2>Fun Facts</h2>
+        <ul class="card-list">
+          <li>
+            <h3>Free Printing</h3>
+            <p>Ask at the AS Student Life front desk to print flyers for your student org.</p>
+          </li>
+          <li>
+            <h3>Study Spots</h3>
+            <p>Geisel’s upper floors are silent, and you can see the ocean on clear days.</p>
+          </li>
+          <li>
+            <h3>Free Food</h3>
+            <p>The Triton Food Pantry offers free groceries to students.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section id="campus-resources">
+        <h2>Campus Resources</h2>
+        <ul>
+          <li><a href="https://basicneeds.ucsd.edu">Basic Needs Hub</a></li>
+          <li><a href="https://caps.ucsd.edu">Counseling &amp; Psychological Services</a></li>
+          <li><a href="https://career.ucsd.edu">Career Center</a></li>
+          <li><a href="https://as.ucsd.edu">Associated Students</a></li>
+        </ul>
+      </section>
+
+      <section id="request-form">
+        <h2>Request an Event or Resource</h2>
+        <p>All fields are required.</p>
+        <!-- Set action to your form service (Google Forms, Formspree, etc.) so submissions reach you. -->
+        <form action="#" method="post">
+          <label>Name <input type="text" name="name" autocomplete="name" required></label>
+          <label>UCSD email <input type="email" name="email" autocomplete="email" required></label>
+          <label>Request type
+            <select name="request-type" required>
+              <option value="">Choose one</option>
+              <option>Event</option>
+              <option>Resource</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Details <textarea name="details" rows="4" required></textarea></label>
+          <button class="button" type="submit">Send Request</button>
+        </form>
+      </section>
+    </article>
+
+    <nav class="sidebar" aria-label="Sections">
+      <h2><a href="index.html">AS Student Life</a></h2>
+      <ul>
+        <li><a href="sand.html">SAND</a></li>
+        <li><a href="resources.html" aria-current="page">Resources</a>
+          <ul>
+            <li><a href="resources.html#fun-facts">Fun Facts</a></li>
+            <li><a href="resources.html#campus-resources">Campus Resources</a></li>
+            <li><a href="resources.html#request-form">Request Form</a></li>
+          </ul>
+        </li>
+        <li><a href="sfl.html">SFL</a></li>
+        <li><a href="student-orgs.html">Student Orgs</a></li>
+        <li><a href="staff.html">Staff</a></li>
+      </ul>
+    </nav>
+  </main>
+
+  <footer>
+    <p>UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230<br>Copyright © 2026 Regents of the University of California. All rights reserved.</p>
+    <ul>
+      <li><a href="https://accessibility.ucsd.edu/">Accessibility</a></li>
+      <li><a href="https://ucsd.edu/about/privacy.html">Privacy</a></li>
+      <li><a href="https://ucsd.edu/about/terms-of-use.html">Terms of Use</a></li>
+      <li><a href="mailto:studentlife@example.edu">Feedback</a></li>
+    </ul>
+    <a href="https://ucsd.edu/"><img src="images/ucsd-logo-white.png" alt="UC San Diego" width="315" height="60"></a>
+  </footer>
+</body>
+</html>
