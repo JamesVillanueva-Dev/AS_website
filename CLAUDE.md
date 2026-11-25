@@ -24,5 +24,6 @@ Goal (set 2026-11-19): the site should look as close to as.ucsd.edu as possible.
 - Home (index.html): upcoming events, an events calendar for things to do on campus (Google Calendar embed), past events, info about the office (with the surfing cat mascot).
 - SAND (sand.html), the Student Ambassador Networking and Development program: a table of open ambassador programs, advice on how to apply, events for ambassadors to market and table at, an email for companies with questions about student ambassadors at UCSD.
 - Resources (resources.html): fun facts (free printing, study spots, etc.), links to other campus resource hubs, a form for students to request events and resources.
+- Student Orgs (student-orgs.html) has the "Open Waypoint" button. Waypoint is a separate directory of UCSD student orgs and events (placeholder URL for now). Embed it in an iframe only once its headers allow framing. Don't add a second orgs page.
 - SFL (sfl.html) and Student Orgs (student-orgs.html).
 - Office Staff (staff.html): staff with about-me bios, a Calendly link, contact emails.
