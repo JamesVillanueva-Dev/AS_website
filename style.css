@@ -2,8 +2,10 @@
   --navy: #182B49;
   --blue: #00629B;
   --dark-blue: #004268;
-  --sand: #F5F0E6;
-  --sand-light: #FAF7F2;
+  --sea: #00778F;
+  --turquoise: #00C6D7;
+  --sand: #F3E7D3;
+  --sand-light: #FAF4E9;
   --line: #D8D7D7;
   --cool-gray: #747678;
   --gray: #666666;
@@ -36,6 +38,9 @@
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   font-family: var(--font);
   line-height: 1.5;
@@ -259,7 +264,9 @@ ol {
 
 .hero .button {
   padding: 14px 60px;
-  border: 2px solid var(--white);
+  border: 2px solid var(--turquoise);
+  background: var(--turquoise);
+  color: var(--navy);
   font-size: 1rem;
   letter-spacing: 0.1em;
 }
@@ -287,10 +294,13 @@ main > .panel {
   color: var(--white);
 }
 
-.panel-dark h2,
 .panel-dark h3,
 .panel-dark a {
   color: var(--white);
+}
+
+.panel-dark h2 {
+  color: var(--turquoise);
 }
 
 .panel-split {
@@ -326,12 +336,18 @@ main > .panel {
 }
 
 .panel-dark .card-list > li {
-  background: var(--blue);
+  background: var(--sea);
   color: var(--white);
 }
 
 .card-list > li > :last-child {
   margin-bottom: 0;
+}
+
+.card-list img {
+  width: 200px;
+  margin-bottom: var(--space-4);
+  border-radius: 8px;
 }
 
 .card-list time {
@@ -493,8 +509,9 @@ form .button {
 footer {
   display: grid;
   gap: var(--space-4);
-  padding: var(--space-5) var(--inline);
-  background: var(--blue);
+  margin-top: auto;
+  padding: calc(var(--space-5) + 20px) var(--inline) var(--space-5);
+  background: url("images/wave.svg") top center / 160px 20px repeat-x, var(--sea);
   color: var(--white);
   font-size: 0.9rem;
 }
@@ -605,6 +622,15 @@ footer img {
 
   .panel-split {
     grid-template-columns: 7fr 5fr;
+  }
+
+  .card-list > li:has(> img) {
+    display: flow-root;
+  }
+
+  .card-list img {
+    float: left;
+    margin: 0 var(--space-5) 0 0;
   }
 
   footer {

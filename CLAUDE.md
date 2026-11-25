@@ -16,9 +16,9 @@ Goal (set 2026-11-19): the site should look as close to as.ucsd.edu as possible.
 1. Header: white strip, "ASSOCIATED STUDENTS" (20px, black, regular, letter-spaced) on the left and the navy UC San Diego logo on the right, linking to ucsd.edu. The logo hides on phones.
 2. Nav: #00629B bar with white links. Hover and the current page (aria-current="page") get #004268. Dropdowns are white with blue links and open on :hover and :focus-within, with no JS. On phones the nav collapses behind a "MENU" button.
 3. Headings: h1 and h2 in Teko SemiBold (h1 blue #00629B, h2 navy), h3 in Roboto bold. Buttons are navy, uppercase, letter-spaced, 8px radius.
-4. Home: a full-width photo hero with the h1 and a "LEARN MORE" button (navy, white border), then boxed panels in a 1200px column: navy panels with blue cards, sand panels with white cards, and a split panel with a white card beside an image. Cards have 14px corners and no accent stripes.
+4. Home: a full-width photo hero with the h1 and a "LEARN MORE" button (turquoise #00C6D7, navy text), then boxed panels in a 1200px column: navy panels with turquoise h2s and sea-teal (#00778F) cards, warm sand (#F3E7D3) panels with white cards, and a split panel with a white card beside an image. Cards have 14px corners and no accent stripes. Turquoise is the only accent (about 10% of the page): use it on navy only, never as text on white or sand.
 5. Interior pages: breadcrumbs ("HOME / Page"), then a 1140px column with the content on the right and a sidebar menu on the left (current section on sand, its sub-links indented). The sidebar drops below the content on phones.
-6. Footer: #00629B, small white text: "UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230", the copyright line, then Accessibility | Privacy | Terms of Use | Feedback, with the white UC San Diego logo on the right.
+6. Footer: sea teal #00778F with a gentle wave along its top edge (images/wave.svg), small white text: "UC San Diego 9500 Gilman Dr. La Jolla, CA 92093 (858) 534-2230", the copyright line, then Accessibility | Privacy | Terms of Use | Feedback, with the white UC San Diego logo on the right.
 
 ## Site content (AS Student Life)
 - Home (index.html): upcoming events, an events calendar for things to do on campus (Google Calendar embed), past events, info about the office (with the surfing cat mascot).
